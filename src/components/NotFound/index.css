@@ -1,0 +1,63 @@
+/* Container for the 404 page */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background-color: #121212;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styling the image */
+.not-found-img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Styling for the Page Not Found heading */
+.heading-notfound {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Styling the paragraph with additional message */
+.para-notfound {
+  font-size: 16px;
+  color: #b6c5ff;
+}
+
+/* Responsive design for medium screens (tablets) */
+@media (max-width: 768px) {
+  .not-found-img {
+    width: 220px; /* Adjust image size for medium screens */
+  }
+
+  .heading-notfound {
+    font-size: 24px; /* Smaller heading size for medium screens */
+  }
+
+  .para-notfound {
+    font-size: 14px; /* Smaller paragraph text for medium screens */
+  }
+}
+
+/* Responsive design for small screens (mobiles) */
+@media (max-width: 576px) {
+  .not-found-img {
+    width: 180px; /* Further reduce the image size on mobile */
+  }
+
+  .heading-notfound {
+    font-size: 20px; /* Smaller heading for mobile screens */
+  }
+
+  .para-notfound {
+    font-size: 12px; /* Smaller paragraph text for mobile */
+    padding: 0 10px; /* Add padding for readability on small screens */
+  }
+}

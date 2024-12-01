@@ -1,0 +1,434 @@
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #f1f5f9;
+  margin: 0;
+  padding: 0;
+}
+
+.jobs-container {
+  display: flex;
+  flex-direction: column; /* Ensures column layout with Header at top */
+  min-height: 100vh;
+}
+.job-items-container {
+  list-style: none;
+}
+/* Ensure Header stays at the top */
+header {
+  width: 100%;
+  background-color: #272727; /* Adjust as per your header design */
+  padding: 10px;
+  color: white;
+}
+
+/* Container for the filters and job listings */
+.jodPage-container {
+  display: flex;
+  flex-grow: 1; /* Makes it take up remaining height */
+  flex-direction: row; /* Default layout for larger screens */
+}
+.link-style {
+  text-decoration: none;
+}
+.jobs-filter-container {
+  padding: 20px;
+  width: 25%; /* Full width for large screens */
+}
+
+.jobs-data-section {
+  background-color: #000000;
+  padding: 20px;
+  width: 75%;
+}
+
+.job-serach-container {
+  width: 60%;
+  margin-left: 5%;
+  padding: 10px;
+  background-color: #000000;
+  color: #fff;
+  border: 2px solid #b6c5ff;
+  border-radius: 5px;
+  outline: none;
+}
+
+.serach-btn {
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-section {
+  background-image: url('https://assets.ccbp.in/frontend/react-js/profile-bg.png');
+  background-size: cover;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.name-heading {
+  font-size: 24px;
+  color: #4f46e5;
+  margin-top: 10px;
+}
+
+.short-bio-para {
+  font-size: 16px;
+  color: #272727;
+}
+
+.category-heading {
+  font-size: 18px;
+  color: #f8fafc;
+  margin-top: 20px;
+}
+
+.hr-line {
+  border: 1px solid #7e858e;
+  margin: 20px 0;
+}
+
+.empType-list-container {
+  list-style: none;
+  padding: 0;
+}
+
+.emptype-link {
+  margin-bottom: 10px;
+}
+
+.emptype-link input[type='checkbox'],
+.emptype-link input[type='radio'] {
+  margin-right: 10px;
+}
+
+.pacakage-heading {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.job-item {
+  background-color: #1a1a1a;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
+}
+
+.job-item-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.company-logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.title-rating-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.job-item-title {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.job-item-rating-btn {
+  background-color: transparent;
+  color: #fbbf24;
+  border: none;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.job-item-rating {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.loc-empType-pac-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.loc-emp-container {
+  display: flex;
+}
+
+.loc-emp-section {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.loc-emp-icon-text {
+  font-size: 16px;
+  color: #ffffff;
+  margin-left: 5px;
+}
+.loc-emp-icon {
+  color: #ffffff;
+}
+.job-item-discripiton-container {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.dis-heading {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.job-item-discripiton-para {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Media Queries */
+
+/* Small and Extra Small Devices (Size < 768px) */
+@media (max-width: 768px) {
+  .jodPage-container {
+    flex-direction: column; /* Stack filters and job section in a column */
+  }
+
+  .jobs-filter-container,
+  .jobs-data-section {
+    width: 100%; /* Make both sections take up full width */
+  }
+
+  .serach-container-lg {
+    display: none; /* Hide large search bar for smaller devices */
+  }
+
+  .serach-container-sm {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .job-item {
+    padding: 10px;
+  }
+}
+
+/* Medium Devices (Size >= 768px) */
+@media (min-width: 768px) {
+  .jodPage-container {
+    flex-direction: row;
+  }
+
+  .jobs-filter-container {
+    width: 30%; /* Slightly larger width for medium screens */
+  }
+
+  .jobs-data-section {
+    width: 70%;
+  }
+
+  .serach-container-sm {
+    display: none; /* Hide small search bar for larger devices */
+  }
+
+  .serach-container-lg {
+    display: flex; /* Show large search bar for larger devices */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Font size adjustments for medium screens */
+  .job-item-title {
+    font-size: 24px;
+  }
+
+  .job-item-rating {
+    font-size: 18px;
+  }
+
+  .dis-heading {
+    font-size: 20px;
+  }
+
+  .job-item-discripiton-para {
+    font-size: 18px;
+  }
+}
+
+/* Large Devices (Size >= 992px) */
+@media (min-width: 992px) {
+  .jodPage-container {
+    flex-direction: row;
+  }
+
+  .jobs-filter-container {
+    width: 25%;
+    max-height: 800px;
+    border-radius: 10px;
+  }
+
+  .jobs-data-section {
+    width: 75%;
+  }
+
+  /* Font size adjustments for large screens */
+  .job-item-title {
+    font-size: 28px;
+  }
+
+  .job-item-rating {
+    font-size: 20px;
+  }
+
+  .dis-heading {
+    font-size: 24px;
+  }
+
+  .job-item-discripiton-para {
+    font-size: 20px;
+  }
+}
+
+/* Container for the 404 page */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  background-color: #121212;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styling the image */
+.not-found-img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Styling for the Page Not Found heading */
+.heading-notfound {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Styling the paragraph with additional message */
+.para-notfound {
+  font-size: 16px;
+  color: #b6c5ff;
+}
+
+/* Font size adjustments for medium screens */
+@media (min-width: 768px) {
+  .heading-notfound {
+    font-size: 32px;
+  }
+
+  .para-notfound {
+    font-size: 18px;
+  }
+}
+
+/* Font size adjustments for large screens */
+@media (min-width: 992px) {
+  .heading-notfound {
+    font-size: 36px;
+  }
+
+  .para-notfound {
+    font-size: 20px;
+  }
+}
+/* Container for the no jobs found section */
+.nojob-failure-loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  background-color: #121212;
+  padding: 20px;
+}
+
+/* Styling the image */
+.nojob-img {
+  width: 250px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Styling for the No Jobs Found heading */
+.nojob-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Styling the paragraph with further details */
+.nojob-para {
+  font-size: 16px;
+  color: #b6c5ff;
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive design for medium screens (tablets) */
+@media (max-width: 768px) {
+  .nojob-img {
+    width: 200px; /* Slightly reduce the image size */
+  }
+
+  .nojob-heading {
+    font-size: 20px; /* Adjust heading size for medium screens */
+  }
+
+  .nojob-para {
+    font-size: 14px; /* Adjust paragraph size for medium screens */
+  }
+}
+
+/* Responsive design for small screens (mobiles) */
+@media (max-width: 576px) {
+  .nojob-img {
+    width: 150px; /* Further reduce image size on mobile */
+  }
+
+  .nojob-heading {
+    font-size: 18px; /* Smaller heading for mobile screens */
+  }
+
+  .nojob-para {
+    font-size: 12px; /* Smaller paragraph text for mobile */
+    padding: 0 10px; /* Add padding for better readability on small screens */
+  }
+}
