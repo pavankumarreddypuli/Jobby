@@ -164,9 +164,9 @@ class JobsPage extends Component {
   }
 
   createEmployeTypeFilter = (empType, keyID) => (
-    <li className='emptype-link' key={keyID}>
+    <li className="emptype-link" key={keyID}>
       <input
-        type='checkbox'
+        type="checkbox"
         id={empType.employmentTypeId}
         value={empType.employmentTypeId}
         onChange={this.updateEmploymentType}
@@ -180,11 +180,11 @@ class JobsPage extends Component {
     this.setState({minimumPackage: event.target.value}, this.getJobsDetails)
 
   createSalaryTypeFilter = (salType, keyId) => (
-    <li className='emptype-link' key={keyId}>
+    <li className="emptype-link" key={keyId}>
       <input
-        type='radio'
+        type="radio"
         id={salType.salaryRangeId}
-        name='salaryRange'
+        name="salaryRange"
         value={salType.salaryRangeId}
         onChange={this.updateSalaryType}
       />
@@ -196,11 +196,11 @@ class JobsPage extends Component {
   retryProfileFailureView = () => this.getProfileDetails()
 
   renderProfileFailureView = () => (
-    <div className='profile-section-loading-failure'>
+    <div className="profile-section-loading-failure">
       <button
-        className='retry-btn'
+        className="retry-btn"
         onClick={this.retryProfileFailureView}
-        type='button'
+        type="button"
       >
         Retry
       </button>
@@ -211,23 +211,23 @@ class JobsPage extends Component {
     const {profileApiDetails} = this.state
     const {name, profileImageUrl, shortBio} = profileApiDetails
     return (
-      <div className='profile-section'>
-        <img src={profileImageUrl} className='profile-img' alt='profile' />
-        <h1 className='name-heading'>{name}</h1>
-        <p className='short-bio-para'>{shortBio}</p>
+      <div className="profile-section">
+        <img src={profileImageUrl} className="profile-img" alt="profile" />
+        <h1 className="name-heading">{name}</h1>
+        <p className="short-bio-para">{shortBio}</p>
       </div>
     )
   }
 
   renderProfileLoderView = () => (
-    <div className='profile-section-loading-failure' data-testid='loader'>
-      <Loader type='ThreeDots' color='#ffffff' height='50' width='50' />
+    <div className="profile-section-loading-failure" data-testid="loader">
+      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
 
   renderJobsLoderView = () => (
-    <div className='nojob-failure-loader-container' data-testid='loader'>
-      <Loader type='ThreeDots' color='#ffffff' height='50' width='50' />
+    <div className="nojob-failure-loader-container" data-testid="loader">
+      <Loader type="ThreeDots" color="#ffffff" height="50" width="50" />
     </div>
   )
 
@@ -243,45 +243,45 @@ class JobsPage extends Component {
       title,
     } = jobItem
     return (
-      <Link to={`/jobs/${id}`} className='link-style'>
-        <li className='job-item' key={key}>
-          <div className='job-item-logo-container'>
+      <Link to={`/jobs/${id}`} className="link-style">
+        <li className="job-item" key={key}>
+          <div className="job-item-logo-container">
             <img
               src={companyLogoUrl}
-              className='company-logo-img'
-              alt='company logo'
+              className="company-logo-img"
+              alt="company logo"
             />
-            <div className='title-rating-container'>
-              <h1 className='job-item-title'>{title}</h1>
-              <div className='rating-container'>
+            <div className="title-rating-container">
+              <h1 className="job-item-title">{title}</h1>
+              <div className="rating-container">
                 <button
-                  className='job-item-rating-btn'
-                  data-testid='searchButton'
-                  type='button'
+                  className="job-item-rating-btn"
+                  data-testid="searchButton"
+                  type="button"
                 >
                   <BsStar />
                 </button>
-                <p className='job-item-rating'>{rating}</p>
+                <p className="job-item-rating">{rating}</p>
               </div>
             </div>
           </div>
-          <div className='loc-empType-pac-container'>
-            <div className='loc-emp-container'>
-              <div className='loc-emp-section'>
-                <HiOutlineLocationMarker className='loc-emp-icon' />
-                <p className='loc-emp-icon-text'>{location}</p>
+          <div className="loc-empType-pac-container">
+            <div className="loc-emp-container">
+              <div className="loc-emp-section">
+                <HiOutlineLocationMarker className="loc-emp-icon" />
+                <p className="loc-emp-icon-text">{location}</p>
               </div>
-              <div className='loc-emp-section'>
-                <CgWorkAlt className='loc-emp-icon' />
-                <p className='loc-emp-icon-text'>{employmentType}</p>
+              <div className="loc-emp-section">
+                <CgWorkAlt className="loc-emp-icon" />
+                <p className="loc-emp-icon-text">{employmentType}</p>
               </div>
             </div>
-            <h1 className='pacakage-heading'>{packagePerAnnum}</h1>
+            <h1 className="pacakage-heading">{packagePerAnnum}</h1>
           </div>
-          <hr className='hr-line' />
-          <div className='job-item-discripiton-container'>
-            <h1 className='dis-heading'>Description</h1>
-            <p className='job-item-discripiton-para'>{jobDescription}</p>
+          <hr className="hr-line" />
+          <div className="job-item-discripiton-container">
+            <h1 className="dis-heading">Description</h1>
+            <p className="job-item-discripiton-para">{jobDescription}</p>
           </div>
         </li>
       </Link>
@@ -291,20 +291,20 @@ class JobsPage extends Component {
   retryNojobsView = () => this.getJobsDetails()
 
   renderNojobsView = () => (
-    <div className='nojob-failure-loader-container'>
+    <div className="nojob-failure-loader-container">
       <img
-        src='https://assets.ccbp.in/frontend/react-js/no-jobs-img.png'
-        className='nojob-img'
-        alt='no jobs'
+        src="https://assets.ccbp.in/frontend/react-js/no-jobs-img.png"
+        className="nojob-img"
+        alt="no jobs"
       />
-      <h1 className='nojob-heading'>No Jobs Found</h1>
-      <p className='nojob-para'>
+      <h1 className="nojob-heading">No Jobs Found</h1>
+      <p className="nojob-para">
         We could not find any jobs. Try other filters
       </p>
       <button
-        className='retry-btn'
+        className="retry-btn"
         onClick={this.retryNojobsView}
-        type='button'
+        type="button"
       >
         Retry
       </button>
@@ -317,24 +317,24 @@ class JobsPage extends Component {
       return this.renderNojobsView()
     }
     return (
-      <ul className='job-items-container'>
+      <ul className="job-items-container">
         {jobsList.map(jobItem => this.renderJobsItem(jobItem, jobItem.id))}
       </ul>
     )
   }
 
   renderJobsFailureView = () => (
-    <div className='nojob-failure-loader-container'>
+    <div className="nojob-failure-loader-container">
       <img
-        src='https://assets.ccbp.in/frontend/react-js/failure-img.png'
-        className='nojob-img'
-        alt='failure view'
+        src="https://assets.ccbp.in/frontend/react-js/failure-img.png"
+        className="nojob-img"
+        alt="failure view"
       />
-      <h1 className='nojob-heading'>OOPS! something went wrong </h1>
-      <p className='nojob-para'>
+      <h1 className="nojob-heading">OOPS! something went wrong </h1>
+      <p className="nojob-para">
         We can&apos;t seem to find the page which you are looking for
       </p>
-      <button className='retry-btn' onClick={this.getJobsDetails} type='button'>
+      <button className="retry-btn" onClick={this.getJobsDetails} type="button">
         Retry
       </button>
     </div>
@@ -370,29 +370,29 @@ class JobsPage extends Component {
 
   render() {
     return (
-      <div className='jobs-container'>
+      <div className="jobs-container">
         <Header />
-        <div className='jodPage-container'>
-          <div className='jobs-filter-container'>
-            <div className='serach-container-sm'>
+        <div className="jodPage-container">
+          <div className="jobs-filter-container">
+            <div className="serach-container-sm">
               <input
-                type='search'
-                className='job-serach-container'
+                type="search"
+                className="job-serach-container"
                 onChange={this.updateSearch}
               />
               <button
-                className='serach-btn'
+                className="serach-btn"
                 onClick={this.searchIpSumbit}
-                data-testid='searchButton'
-                type='button'
+                data-testid="searchButton"
+                type="button"
               >
                 <BsSearch />
               </button>
             </div>
             {this.renderProfileDetails()}
-            <hr className='hr-line' />
-            <h1 className='category-heading'>Type of Employment</h1>
-            <ul className='empType-list-container'>
+            <hr className="hr-line" />
+            <h1 className="category-heading">Type of Employment</h1>
+            <ul className="empType-list-container">
               {employmentTypesList.map(eachItem =>
                 this.createEmployeTypeFilter(
                   eachItem,
@@ -400,26 +400,26 @@ class JobsPage extends Component {
                 ),
               )}
             </ul>
-            <hr className='hr-line' />
-            <h1 className='category-heading'>Salary Range</h1>
-            <ul className='empType-list-container'>
+            <hr className="hr-line" />
+            <h1 className="category-heading">Salary Range</h1>
+            <ul className="empType-list-container">
               {salaryRangesList.map(eachItem =>
                 this.createSalaryTypeFilter(eachItem, eachItem.salaryRangeId),
               )}
             </ul>
           </div>
-          <div className='jobs-data-section'>
-            <div className='serach-container-lg'>
+          <div className="jobs-data-section">
+            <div className="serach-container-lg">
               <input
-                type='search'
-                className='job-serach-container'
+                type="search"
+                className="job-serach-container"
                 onChange={this.updateSearch}
               />
               <button
-                className='serach-btn'
+                className="serach-btn"
                 onClick={this.searchIpSumbit}
-                data-testid='searchButton'
-                type='button'
+                data-testid="searchButton"
+                type="button"
               >
                 <BsSearch />
               </button>
